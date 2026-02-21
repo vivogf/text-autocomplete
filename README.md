@@ -3,28 +3,6 @@
 Проект по автодополнению текстов на основе датасета коротких постов (Sentiment140).
 Реализованы и сравнены две модели: обученная с нуля LSTM и предобученный трансформер distilgpt2.
 
-## Структура проекта
-
-text-autocomplete/
-├── data/
-│   ├── raw_dataset.csv          # сырой датасет
-│   ├── dataset_processed.csv    # очищенный датасет
-│   ├── train.csv                # 80% — обучение
-│   ├── val.csv                  # 10% — валидация
-│   └── test.csv                 # 10% — тест
-├── src/
-│   ├── data_utils.py            # очистка и разбивка датасета
-│   ├── next_token_dataset.py    # словарь, Dataset, DataLoader
-│   ├── lstm_model.py            # архитектура LSTM
-│   ├── lstm_train.py            # цикл обучения
-│   ├── eval_lstm.py             # замер ROUGE для LSTM
-│   └── eval_transformer_pipeline.py  # замер ROUGE для distilgpt2
-├── configs/
-├── models/
-│   └── lstm.pt                  # веса обученной модели
-├── solution.ipynb               # полное решение с выводами
-└── requirements.txt
-
 ## Данные
 
 Датасет: [Sentiment140] — 1.6М коротких твитов на английском языке.
